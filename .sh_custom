@@ -30,6 +30,9 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 # sudo useradd -rM www -g www 2>/dev/null;
 alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;" 
 
+alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; sudo find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777;" # v2016-02-24
+
+
 # docker perms
 alias containerperm="sudo useradd -rM container -g container 2>/dev/null; sudo mkdir /mnt/container 2>/dev/null; sudo chown -R container:container /mnt/container ;"
 
