@@ -1,7 +1,7 @@
 #!/bin/sh
 ##echo 'in .sh_custom'
 
-alias misc="cd ~/workspace/misc/;ls;"
+alias W="cd ~/Workspace/;ls;"
 alias _="cd /_/;ls;"
 
 #if /gavin/ exists: alias composer="php /home/gavin/bin/composer.phar"
@@ -13,7 +13,7 @@ alias giff='git difftool -g ';
 #alias rm="echo 'use trash instead! #'"
 
 #if []; then
-#  export PATH="~/node_modules/.bin:$PATH" 
+#  export PATH="~/node_modules/.bin:$PATH"
 #fi
 
 alias D="cd ~/Desktop; ls;"
@@ -28,7 +28,7 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 # sudo usermod -a -G www apache; # RHEL / Apache
 # the sudo find commands cause a lot of git modifications:  sudo find /var/www -type d -exec chmod 2775 {} +; sudo find /var/www -type f -exec chmod 0664 {} +;
 # sudo useradd -rM www -g www 2>/dev/null;
-alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;" 
+alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
 
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; sudo find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777;" # v2016-02-24
 
@@ -47,11 +47,12 @@ alias memuse="ps -A --sort -rss -o comm,pmem,rss | head -n 20";
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
- 
+
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 NO_COLOR="\[\033[0m\]"
- 
+
 PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
+alias i='xcalib -i -a'
