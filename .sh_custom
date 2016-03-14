@@ -30,12 +30,13 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 # the sudo find commands cause a lot of git modifications:  sudo find /var/www -type d -exec chmod 2775 {} +; sudo find /var/www -type f -exec chmod 0664 {} +;
 # sudo useradd -rM www -g www 2>/dev/null;
 ###alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
-
-alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; sudo find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-02-24
+# http://superuser.com/questions/471844/why-is-setuid-ignored-on-directories/712779#712779
+alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
+alias laravelperms="sudo find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777;" # v2016-03-10
 
 
 # docker perms
-alias containerperm="sudo useradd -rM container -g container 2>/dev/null; sudo mkdir /mnt/container 2>/dev/null; sudo chown -R container:container /mnt/container ;"
+alias containerperm="sudo useradd -rM container -g container 2>/dev/null; sudo mkdir /mnt/container 2>/dev/null; sudo chown -R container:container /mnt/container ;" # v2016-03-10
 
 
 alias dls='sudo docker ps';
@@ -57,3 +58,4 @@ NO_COLOR="\[\033[0m\]"
 PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 alias i='xcalib -i -a'
+alias art="php artisan";
