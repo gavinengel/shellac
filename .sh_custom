@@ -32,7 +32,7 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 ###alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
 # http://superuser.com/questions/471844/why-is-setuid-ignored-on-directories/712779#712779
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
-alias laravelperms="sudo find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777;" # v2016-03-10
+alias laravelperms="sudo find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-16
 
 
 # docker perms
