@@ -6,11 +6,11 @@ alias @="cd ~/Workspace/@; ll;"
 alias _="cd /_/;ls;"
 
 #if /gavin/ exists: alias composer="php /home/gavin/bin/composer.phar"
-alias sl=slap;
+#alias sl=slap;
 #alias subl=sublime3;
 alias sloc="find . -name '*.*' | xargs wc -l";
 
-alias giff='git difftool -g ';
+#alias giff='git difftool -g ';
 #alias rm="echo 'use trash instead! #'"
 
 #if []; then
@@ -20,7 +20,7 @@ alias giff='git difftool -g ';
 alias D="cd ~/Desktop; ls;"
 alias dl="cd ~/Downloads; ls;"
 
-alias my="title mysql; mysql -uroot -p "
+#alias my="title mysql; mysql -uroot -p "
 
 alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 
@@ -32,7 +32,7 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 ###alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
 # http://superuser.com/questions/471844/why-is-setuid-ignored-on-directories/712779#712779
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
-alias laravelperms="sudo find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-16
+alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
 
 # docker perms
@@ -59,3 +59,7 @@ PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 alias i='xcalib -i -a'
 alias art="php artisan";
+
+alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
+alias xoff="sudo php5dismod xdebug; sudo service apache2 restart;"
+
