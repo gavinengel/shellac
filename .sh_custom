@@ -63,3 +63,4 @@ alias art="php artisan";
 alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
 alias xoff="sudo php5dismod xdebug; sudo service apache2 restart;"
 
+alias x="atool -x";
