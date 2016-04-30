@@ -4,7 +4,6 @@
 if [[ ! $PATH =~ .*/bin/node/lib/node_modules/.bin* ]]; then export PATH="$HOME/bin/node/lib/node_modules/.bin:$PATH";fi; 
 if [[ ! $PATH =~ .*/.composer/vendor/bin* ]]; then export PATH="$HOME/.composer/vendor/bin:$PATH";fi;
 
-alias la="ls -Ahl --color"
 alias ll="ls -Ahl --color"
 alias vim="vim --startuptime ~/.vim.log "
 alias vi=vim
@@ -26,11 +25,14 @@ elif [ -n "$BASH_VERSION" ]; then
    source ~/.bash_common;
    source ~/.bash_custom;
 else
-   echo 'well, shoot.';
+   echo 'Cannot determine shell.';
 fi
 
-
-
+alias ..='cd ..;ls;'
+alias ...='cd ../..;ls;'
+alias ....='cd ../../..;ls;'
+alias .....='cd ../../../..;ls;'
+alias ......='cd ../../../../..;ls;'
 
 # Custom stuff
 #if [ -f ~/.bash_custom ]; then
