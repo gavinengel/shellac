@@ -10,7 +10,7 @@ alias _="cd /_/;ls;"
 #alias subl=sublime3;
 alias sloc="find . -name '*.*' | xargs wc -l";
 
-alias giff='git difftool -y ';
+alias giff='git difftool --tool=meld -y';
 #alias rm="echo 'use trash instead! #'"
 
 #if []; then
