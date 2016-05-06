@@ -78,3 +78,5 @@ function recompose () {
   #php artisan clear-compiled; # logs users out?
   composer dump-autoload -o;
 }
+
+alias lmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
