@@ -68,3 +68,13 @@ alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
 alias xoff="sudo php5dismod xdebug; sudo service apache2 restart;"
 
 alias x="atool -x";
+
+# composer & artisan redeploy 2016-05-06
+function recompose () {
+  #composer install;
+  php artisan migrate;
+  php artisan schedule:run;
+  #php artisan cache:clear; # logs users out?
+  #php artisan clear-compiled; # logs users out?
+  composer dump-autoload -o;
+}
