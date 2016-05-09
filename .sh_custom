@@ -80,3 +80,4 @@ function recompose () {
 }
 
 alias lmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
+alias lmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE ';
