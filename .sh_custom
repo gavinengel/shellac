@@ -1,39 +1,13 @@
 #!/bin/sh
-##echo 'in .sh_custom'
 
 alias W="cd ~/Workspace/;ls;"
 alias @="cd ~/Workspace/@; ll;"
 alias _="cd /_/;ls;"
-
-#if /gavin/ exists: alias composer="php /home/gavin/bin/composer.phar"
-#alias sl=slap;
-#alias subl=sublime3;
 alias sloc="find . -name '*.*' | xargs wc -l";
-
 alias giff='git difftool --tool=meld -y';
-#alias rm="echo 'use trash instead! #'"
-
-#if []; then
-#  export PATH="~/node_modules/.bin:$PATH"
-#fi
-
 alias D="cd ~/Desktop; ls;"
 alias dl="cd ~/Downloads; ls;"
-
-#alias my="title mysql; mysql -uroot -p "
-
 alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
-
-# also this? #sudo chmod 2775 /var/www;
-# sudo usermod -a -G www www-data; # Ubuntu / Apache
-# sudo usermod -a -G www apache; # RHEL / Apache
-# the sudo find commands cause a lot of git modifications:  sudo find /var/www -type d -exec chmod 2775 {} +; sudo find /var/www -type f -exec chmod 0664 {} +;
-# sudo useradd -rM www -g www 2>/dev/null;
-###alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
-# http://superuser.com/questions/471844/why-is-setuid-ignored-on-directories/712779#712779
-# adduser --system --no-create-home USERNAME # this was useful for sitesperms for kleary, to make user www
-# alias sitesperms='cd /var/sites/ && sudo chmod -R g+rwx * && sudo chown -R www:www * && sudo chown root:www * && sudo chmod 770 *; find /var/sites/ -type d -print | sudo xargs chmod g+s;'
-
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
 alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
@@ -79,5 +53,5 @@ function recompose () {
   composer dump-autoload -o;
 }
 
-alias lmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
-alias lmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE ';
+alias laravelmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
+alias laravelmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE ';
