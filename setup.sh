@@ -9,4 +9,4 @@ ln -sf ~/shellac/.bash_custom ~/;
 ln -sf ~/shellac/.zsh_common ~/;
 ln -sf ~/shellac/.zsh_custom ~/;
 ln -sf ~/shellac/.zshrc ~/;
-
+echo 'Done.'.
