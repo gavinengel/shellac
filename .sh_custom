@@ -34,7 +34,7 @@ alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 # adduser --system --no-create-home USERNAME # this was useful for sitesperms for kleary, to make user www
 # alias sitesperms='cd /var/sites/ && sudo chmod -R g+rwx * && sudo chown -R www:www * && sudo chown root:www * && sudo chmod 770 *; find /var/sites/ -type d -print | sudo xargs chmod g+s;'
 
-alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
+alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod -f g+s;" # v2016-05-17
 alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
 
