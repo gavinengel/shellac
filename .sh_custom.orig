@@ -8,7 +8,22 @@ alias giff='git difftool --tool=meld -y';
 alias D="cd ~/Desktop; ls;"
 alias dl="cd ~/Downloads; ls;"
 alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
+<<<<<<< HEAD
+
+# also this? #sudo chmod 2775 /var/www;
+# sudo usermod -a -G www www-data; # Ubuntu / Apache
+# sudo usermod -a -G www apache; # RHEL / Apache
+# the sudo find commands cause a lot of git modifications:  sudo find /var/www -type d -exec chmod 2775 {} +; sudo find /var/www -type f -exec chmod 0664 {} +;
+# sudo useradd -rM www -g www 2>/dev/null;
+###alias wwwpermubuntu="find /var/www/ -name 'storage' -print0 | sudo xargs -0 chmod -R 777; sudo useradd -rM www -g www 2>/dev/null; sudo chown -R www-data:www /var/www ;"
+# http://superuser.com/questions/471844/why-is-setuid-ignored-on-directories/712779#712779
+# adduser --system --no-create-home USERNAME # this was useful for sitesperms for kleary, to make user www
+# alias sitesperms='cd /var/sites/ && sudo chmod -R g+rwx * && sudo chown -R www:www * && sudo chown root:www * && sudo chmod 770 *; find /var/sites/ -type d -print | sudo xargs chmod g+s;'
+
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod -f g+s;" # v2016-05-17
+=======
+alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod g+s;" # v2016-03-10
+>>>>>>> 23cc857d373fc23228a457cb383e43197864712f
 alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
 
