@@ -2,7 +2,6 @@
 
 alias W="cd ~/Workspace/;ls;"
 alias @="cd ~/Workspace/@; ll;"
-alias _="cd /_/;ls;"
 alias sloc="find . -name '*.*' | xargs wc -l";
 alias giff='git difftool --tool=meld -y';
 alias D="cd ~/Desktop; ls;"
@@ -12,15 +11,11 @@ alias g="git";
 alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod -f g+s;" # v2016-05-17
 alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
-
-
 # docker perms
 alias containerperm="sudo useradd -rM container -g container 2>/dev/null; sudo mkdir /mnt/container 2>/dev/null; sudo chown -R container:container /mnt/container ;" # v2016-03-10
 
-
 alias dls='sudo docker ps';
 dssh () { sudo docker exec -i -t "$@" bash; }
-
 
 alias memuse="ps -A --sort -rss -o comm,pmem,rss | head -n 20";
 
