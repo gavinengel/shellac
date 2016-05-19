@@ -35,8 +35,8 @@ alias i='xcalib -i -a'
 alias s='php -S localhost:5555'
 alias art="php artisan";
 
-alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
-alias xoff="sudo php5dismod xdebug; sudo service apache2 restart;"
+alias xon="sudo phpenmod xdebug; sudo service apache2 restart;"
+alias xoff="sudo phpdismod xdebug; sudo service apache2 restart;"
 
 alias x="atool -x";
 
