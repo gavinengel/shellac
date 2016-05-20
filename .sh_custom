@@ -1,5 +1,9 @@
 #!/bin/sh
 
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
 alias W="cd ~/Workspace/;ls;"
 alias @="cd ~/Workspace/@; ll;"
 alias sloc="find . -name '*.*' | xargs wc -l";
@@ -35,10 +39,14 @@ alias i='xcalib -i -a'
 alias s='php -S localhost:5555'
 alias art="php artisan";
 
-alias xon="sudo phpenmod xdebug; sudo service apache2 restart;"
-alias xoff="sudo phpdismod xdebug; sudo service apache2 restart;"
+alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
+alias xoff="sudo php5dismod xdebug; sudo service apache2 restart;"
+if command_exists phpenmod ; then
+    alias xon="sudo phpenmod xdebug; sudo service apache2 restart;"
+    alias xoff="sudo phpdismod xdebug; sudo service apache2 restart;"
+fi
 
-alias x="atool -x";
+alias extract="atool -qx";
 
 # composer & artisan redeploy 2016-05-06
 function recompose () {
