@@ -58,5 +58,15 @@ function recompose () {
   composer dump-autoload -o;
 }
 
+<<<<<<< HEAD
+alias x="atool -x";
+
+alias gita="git add";
+alias gitc="git commit";
+alias g="git";
+alias g.="git ";
+
+=======
 alias laravelmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
 alias laravelmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE ';
+>>>>>>> 9f4a112fb9c6e4e98f8b16f7ab55d331895b6d58
