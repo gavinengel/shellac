@@ -36,7 +36,7 @@ NO_COLOR="\[\033[0m\]"
 PS1="$GREEN\u@\h$NO_COLOR:\w$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
 alias i='xcalib -i -a'
-alias s='php -S localhost:5555'
+alias serv='php -S localhost:5555'
 alias art="php artisan";
 
 alias xon="sudo php5enmod xdebug; sudo service apache2 restart;"
