@@ -11,5 +11,9 @@
 	s = status
 	st = status
 	ci = commit -v
+        cm = commit -m
+	co = checkout
 	unadd = reset
 	uncommit = reset --soft HEAD^
+	m = merge
+
