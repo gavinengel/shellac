@@ -7,10 +7,12 @@
 	insteadOf = git://
 [alias]
 	a = add
+	ci = commit -v
+	cm = commit -m
+	co = checkout
+	m = merge
 	p = pull
 	s = status
 	st = status
-	ci = commit -v
-	cm = commit -m
 	unadd = reset
 	uncommit = reset --soft HEAD^
