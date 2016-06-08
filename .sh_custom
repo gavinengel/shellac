@@ -58,5 +58,5 @@ function recompose () {
   composer dump-autoload -o;
 }
 
-alias laravelmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE;';
+alias laravelmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE';
 alias laravelmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE ';
