@@ -12,6 +12,7 @@
 	co = checkout
 	m = merge
 	p = pull
+	ps = push
 	s = status
 	st = status
 	unadd = reset
