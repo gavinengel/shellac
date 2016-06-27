@@ -10,6 +10,7 @@
 	ci = commit -v
 	cm = commit -m
 	co = checkout
+	f = fetch
 	m = merge
 	p = pull
 	ps = push
