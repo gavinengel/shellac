@@ -16,3 +16,9 @@ source ~/.sh_common;
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
+
+###-tns-completion-start-###
+if [ -f /home/gavin/.tnsrc ]; then 
+    source /home/gavin/.tnsrc 
+fi
+###-tns-completion-end-###

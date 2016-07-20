@@ -38,3 +38,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # gavin was here.
 source ~/.sh_common
+
+###-tns-completion-start-###
+if [ -f /home/gavin/.tnsrc ]; then 
+    source /home/gavin/.tnsrc 
+fi
+###-tns-completion-end-###

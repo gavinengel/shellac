@@ -8,3 +8,9 @@ fi
 
 export NVM_DIR="/home/gavin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+###-tns-completion-start-###
+if [ -f /home/gavin/.tnsrc ]; then 
+    source /home/gavin/.tnsrc 
+fi
+###-tns-completion-end-###

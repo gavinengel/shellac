@@ -58,5 +58,14 @@ function recompose () {
   composer dump-autoload -o;
 }
 
-alias laravelmysql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE 2>/dev/null ';
-alias laravelmysqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE 2>/dev/null ';
+alias laravelsql='source .env; mysql -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE 2>/dev/null ';
+alias laravelsqldump='source .env; mysqldump -u"$DB_USERNAME" --password="$DB_PASSWORD" -h"$DB_HOST" $DB_DATABASE 2>/dev/null ';
+
+## nativescript
+# http://askubuntu.com/questions/560172/cannot-install-android-studio-on-ubuntu-error-unable-to-access-sdk?rq=1
+export ANDROID_HOME=$HOME/Android/Sdk;
+export PATH=$PATH:$HOME/Android/Sdk/tools;
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools
+#ANDROID_HOME=$HOME/.local/share/umake/android/android-studio/gradle/m2repository/com/android;
+
+
