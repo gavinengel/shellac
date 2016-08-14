@@ -22,7 +22,9 @@ alias dls='sudo docker ps';
 dssh () { sudo docker exec -i -t "$@" bash; }
 
 alias memuse="ps -A --sort -rss -o comm,pmem,rss | head -n 20";
-alias Webpack='webpack --module-bind "css=style!css" --output-filename "bundle.js"'
+alias Webpack='webpack --module-bind "css=style!css" --output-filename "bundle.js"';
+alias webpack='webpack --progress --colors';
+
 
 
 # Helen's git branch label
