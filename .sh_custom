@@ -12,7 +12,7 @@ alias D="cd ~/Desktop; ls;"
 alias dl="cd ~/Downloads; ls;"
 alias lazygit="git pull; git add -A; git commit -m '.'; git push; "
 alias g="git";
-alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod -f g+s;" # v2016-05-17
+alias wwwperms="cd /var/www/ && sudo chmod -R g+rwx * && sudo chown -R www-data:www-data * && sudo chown root:www-data * && sudo chmod 770 *; find /var/www/ -type d -print | sudo xargs chmod -f g+s;cd -;" # v2016-09-15
 alias laravelperms="find /var/www/ -name storage | sudo xargs chmod -R 777;" # v2016-03-24
 
 # docker perms
