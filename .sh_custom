@@ -25,6 +25,8 @@ alias memuse="ps -A --sort -rss -o comm,pmem,rss | head -n 20";
 alias Webpack='webpack --module-bind "css=style!css" --output-filename "bundle.js"';
 alias webpack='webpack --progress --colors';
 
+# fix VIrtualBox memory issue
+alias vbc='killall VBoxClient; VBoxClient --clipboard';
 
 
 # Helen's git branch label

@@ -22,3 +22,9 @@ if [ -f /home/gavin/.tnsrc ]; then
     source /home/gavin/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+###-appbuilder-completion-start-###
+if [ -f /home/gavin/.appbuilderrc ]; then 
+    source /home/gavin/.appbuilderrc 
+fi
+###-appbuilder-completion-end-###
