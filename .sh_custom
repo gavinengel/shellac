@@ -26,7 +26,7 @@ alias Webpack='webpack --module-bind "css=style!css" --output-filename "bundle.j
 alias webpack='webpack --progress --colors';
 
 # fix VIrtualBox memory issue
-alias vbc='killall VBoxClient; VBoxClient --clipboard';
+alias vbc='killall VBoxClient; echo "VBoxClient --clipboard"';
 
 
 # Helen's git branch label
