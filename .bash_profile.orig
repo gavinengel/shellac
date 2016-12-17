@@ -23,11 +23,12 @@ if [ -f /home/gavin/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
+<<<<<<< HEAD
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+=======
 ###-appbuilder-completion-start-###
 if [ -f /home/gavin/.appbuilderrc ]; then 
     source /home/gavin/.appbuilderrc 
 fi
 ###-appbuilder-completion-end-###
-
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+>>>>>>> e56899db7bb4bb8b8b9e58500dcb1f05b5e8357c

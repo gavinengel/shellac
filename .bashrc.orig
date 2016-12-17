@@ -15,10 +15,12 @@ if [ -f /home/gavin/.tnsrc ]; then
 fi
 ###-tns-completion-end-###
 
+<<<<<<< HEAD
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+=======
 ###-appbuilder-completion-start-###
 if [ -f /home/gavin/.appbuilderrc ]; then 
     source /home/gavin/.appbuilderrc 
 fi
 ###-appbuilder-completion-end-###
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+>>>>>>> e56899db7bb4bb8b8b9e58500dcb1f05b5e8357c
