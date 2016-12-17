@@ -22,3 +22,5 @@ if [ -f /home/gavin/.tnsrc ]; then
     source /home/gavin/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

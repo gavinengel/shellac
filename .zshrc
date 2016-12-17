@@ -44,3 +44,5 @@ if [ -f /home/gavin/.tnsrc ]; then
     source /home/gavin/.tnsrc 
 fi
 ###-tns-completion-end-###
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
