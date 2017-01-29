@@ -2,6 +2,9 @@
 if [[ ! $PATH =~ .*/bin/node/lib/node_modules/.bin* ]]; then export PATH="$HOME/bin/node/lib/node_modules/.bin:$PATH";fi; 
 if [[ ! $PATH =~ .*/.composer/vendor/bin* ]]; then export PATH="$HOME/.composer/vendor/bin:$PATH";fi;
 
+# add time to history
+HISTTIMEFORMAT="%Y-%m-%d %T ";
+
 alias ll="ls -Ahl --color"
 alias vim="vim --startuptime ~/.vim.log "
 alias vi=vim
