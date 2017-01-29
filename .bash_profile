@@ -28,3 +28,5 @@ if [ -f /home/gavin/.appbuilderrc ]; then
     source /home/gavin/.appbuilderrc 
 fi
 ###-appbuilder-completion-end-###
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

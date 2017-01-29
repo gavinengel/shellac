@@ -50,3 +50,5 @@ if [ -f /home/gavin/.appbuilderrc ]; then
     source /home/gavin/.appbuilderrc 
 fi
 ###-appbuilder-completion-end-###
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
