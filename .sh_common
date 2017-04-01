@@ -9,7 +9,7 @@ alias ll="ls -Ahl --color"
 alias vim="vim --startuptime ~/.vim.log "
 alias vi=vim
 alias h='history'
-alias lib="cd ~/bin/node/lib/; ll;"
+alias bnl="cd ~/bin/node/lib/; ll;"
 
 ########################################
 source ~/.sh_custom;
