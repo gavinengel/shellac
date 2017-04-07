@@ -11,6 +11,7 @@
 	cm = commit -m
 	co = checkout
 	f = fetch
+	head = reset --hard HEAD
 	m = merge
 	p = pull
 	ps = push
